@@ -1,0 +1,52 @@
+:root {
+  --primary-color: #ff2256;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 450px;
+  color: white;
+  font-size: 40px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.container > div:first-child {
+  background-color: var(--primary-color);
+  padding: 30px;
+  font-weight: bold;
+}
+.container > div:first-child span {
+  color: yellow;
+}
+.game-space {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 5px;
+  margin-top: 30px;
+}
+.game-space div {
+  width: 100%;
+  height: 140px;
+  background-color: var(--primary-color);
+  font-size: 70px;
+  cursor: pointer;
+}
+.game-space div:hover {
+  background: black;
+}
+@media screen and (max-width: 485px) {
+  .container {
+    width: 300px;
+    overflow: hidden;
+  }
+  .game-space {
+    grid-template-columns: repeat(3, 96px);
+  }
+  .game-space div {
+    height: 91px;
+    font-size: 40px;
+  }
+}
